@@ -1,0 +1,13 @@
+{{#each this}}
+<li class="country__item">
+    <h2>Country: {{name}}</h2>
+    <p><b>Capital: {{capital}}</b> </p>
+    <p><b>Population: </b> {{population}} people</p>
+    <div class="country__thumb">
+        <img src="{{flag}}" alt="Flag {{name}}" width="320">
+    </div>
+    <p><b>Languages:</b> {{language}}</p>
+    </li>
+{{/each}}
+
+{{!-- languages.map(language => language.name).join(', ') --}}
