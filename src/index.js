@@ -4,6 +4,7 @@ import countryCard from './templates/countrycard.hbs';
 import countryList from './templates/countrylist.hbs';
 import getRefs from './js/getRefs.js';
 import { Notify } from "notiflix";
+import { debounce } from 'lodash';
 
 const DEBOUNCE_DELAY = 300;
 const refs = getRefs();
@@ -38,6 +39,7 @@ API.fetchCountries(searchLetter)
 
 function renderCountryCard(country) {
     const countryCardMarkup = countryCard(country);
+    // languages.map(language => language.name).join(', ')
     console.log(countryCardMarkup);
     refs.countryCardContainer.innerHTML = ('beforeend', countryCardMarkup) ;
 }
