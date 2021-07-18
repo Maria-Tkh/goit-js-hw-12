@@ -9,7 +9,7 @@ import { debounce } from 'lodash';
 const DEBOUNCE_DELAY = 300;
 const refs = getRefs();
 
-refs.searchForm.addEventListener('input', _.debounce(onSearch, DEBOUNCE_DELAY));
+refs.searchForm.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(event) {
     event.preventDefault();
