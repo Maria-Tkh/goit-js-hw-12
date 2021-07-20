@@ -21,7 +21,7 @@ function onSearch(event) {
 API.fetchCountries(searchLetter)
     .then(countries => {
         if (countries.length > 10) {
-            Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
+            Notify.info('Too many matches found. Please enter a more specific name.')
         }
         if (countries.length >= 2 && countries.length <= 10) {
             renderCountryList(countries);
@@ -31,10 +31,10 @@ API.fetchCountries(searchLetter)
             renderCountryCard(countries[0])
         }
         if (countries.status === 404) {
-           Notiflix.Notify.failure('Oops, there is no country with that name.'); 
+           Notify.failure('Oops, there is no country with that name.'); 
         }
     })
-    .catch(error => console(error)); 
+    .catch(error => console.log(error)); 
 }
 
 function renderCountryCard(country) {
