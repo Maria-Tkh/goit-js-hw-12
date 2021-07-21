@@ -6,8 +6,9 @@
     <div class="country__thumb">
         <img src="{{flag}}" alt="Flag {{name}}" width = "60", height="40">
     </div>
-    <p><b>Languages:</b> {{language}}</p>
-    </li>
+    <p><b>Languages:</b>{{#each languages}}{{ this.name}}
+    {{/each}}</p>
+     </li>
 {{!-- {{/each}} --}}
 
 {{!-- languages.map(language => language.name).join(', ') --}}
