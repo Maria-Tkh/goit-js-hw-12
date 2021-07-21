@@ -1,14 +1,10 @@
-{{!-- {{#each this}} --}}
 <li class="country__item">
     <h2>Country: {{name}}</h2>
     <p><b>Capital: {{capital}}</b> </p>
     <p><b>Population: </b> {{population}} people</p>
     <div class="country__thumb">
-        <img src="{{flag}}" alt="Flag {{name}}" width = "60", height="40">
+        <img src="{{flag}}" alt="Flag {{name}}" width = "100", height="">
     </div>
-    <p><b>Languages:</b>{{#each languages}}{{ this.name}}
-    {{/each}}</p>
+    <p><b>Languages: </b></p>{{#each languages}}<p>{{ this.name}}</p>
+    {{/each}}
      </li>
-{{!-- {{/each}} --}}
-
-{{!-- languages.map(language => language.name).join(', ') --}}
